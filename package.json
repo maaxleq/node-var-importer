@@ -1,5 +1,5 @@
 {
-  "name": "var-importer",
+  "name": "variable-importer",
   "version": "1.0.0",
   "description": "A module to import variables from a .json or .yml file",
   "main": "index.js",
