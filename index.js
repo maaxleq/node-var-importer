@@ -2,7 +2,7 @@ const path = require("path")
 const fs = require("fs")
 const YAML = require("yaml")
 
-function Loader(dir, options={
+function Importer(dir, options={
     format: "json"
 }){
     this.supportedFormats = ["json", "yml"]
@@ -43,4 +43,10 @@ function Loader(dir, options={
     }
 }
 
-module.exports = Loader
+function importer(dir, options={
+    format: "json"
+}){
+    return new Importer(dir, options)
+}
+
+module.exports = importer
