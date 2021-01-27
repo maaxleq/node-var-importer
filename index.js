@@ -28,7 +28,7 @@ function Importer(dir, options={
                 break
         }
 
-        return resultObj
+        return resultObj || {}
     }
 
     this.merge = function(obj1, obj2){
