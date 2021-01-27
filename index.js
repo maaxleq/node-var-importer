@@ -31,15 +31,23 @@ function Importer(dir, options={
         return resultObj
     }
 
+    this.merge = function(obj1, obj2){
+        return {...obj1, ...obj2}
+    }
+
+    this.append = function(obj1, obj2, property){
+        let resultObj = {...obj1}
+        resultObj[property] = {...obj2}
+
+        return resultObj
+    }
+
     this.importAndMerge = function(filename, obj){
-        return {...obj, ...this.import(filename)}
+        return this.merge(obj, this.import(filename))
     }
 
     this.importAndAppend = function(filename, obj, property){
-        let resultObj = {...obj}
-        resultObj[property] = this.import(filename)
-
-        return resultObj
+        return this.append(obj, this.import(filename), property)
     }
 }
 
