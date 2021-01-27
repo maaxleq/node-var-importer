@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://gitlab.com/maaxleq/node-var-importer/issues"
   },
-  "homepage": "https://gitlab.com/maaxleq/node-var-importer#readme"
+  "homepage": "https://gitlab.com/maaxleq/node-var-importer#readme",
+  "dependencies": {
+    "yaml": "^1.10.0"
+  }
 }
